@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON to Excel Converter</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>JSON to Excel Converter</h1>
+    <form action="/convert" method="POST" enctype="multipart/form-data">
+        <input type="file" name="jsonFile" accept=".json" required>
+
+        <h3>Select JSON Type:</h3>
+        <label>
+            <input type="radio" name="jsonType" value="basicArray" required>
+            JSON Basic Array
+        </label><br>
+        <label>
+            <input type="radio" name="jsonType" value="eachObject" required>
+            JSON Each is Object
+        </label><br>
+        <label>
+            <input type="radio" name="jsonType" value="describeObject" required>
+            JSON Describe an Object
+        </label><br>
+        <label>
+            <input type="radio" name="jsonType" value="nested" required>
+            JSON Nested
+        </label><br><br>
+
+        <button type="submit">Convert to Excel</button>
+    </form>
+</body>
+</html>
